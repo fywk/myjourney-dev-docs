@@ -1,0 +1,134 @@
+baseURL = "http://0.0.0.0:1313/"
+copyright = "This is a copyright placeholder"
+# Book configuration
+disablePathToLower = true
+enableGitInfo = true
+theme = "hugo-book"
+title = "MyJourney Dev Docs"
+
+# Tailwind: lets Tailwind see which classes are used in templates and content
+[build]
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = 'css'
+[[build.cachebusters]]
+source = '(postcss|tailwind)\.config\.js'
+target = 'css'
+
+# Multi-lingual mode config
+# There are different options to translate files
+# See https://gohugo.io/content-management/multilingual/#translation-by-filename
+# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+# [languages]
+#   [languages.en]
+#     contentDir = "content"
+#     languageName = "English"
+#     weight = 1
+#
+#   [languages.he]
+#     contentDir = "content.he"
+#     languageDirection = "rtl"
+#     languageName = "Hebrew"
+#     weight = 3
+#
+#   [languages.zh]
+#     contentDir = "content.zh"
+#     languageName = "Chinese"
+#     weight = 2
+
+[markup]
+# Needed for mermaid/katex shortcodes
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "base16-snazzy"
+
+[markup.tableOfContents]
+startLevel = 1
+
+[menu]
+[[menu.after]]
+name = "Github"
+url = "https://github.com/alex-shpak/hugo-book"
+weight = 10
+
+# [[menu.before]]
+
+[[menu.home]]
+name = "Documentation"
+pageRef = "/docs/"
+weight = 10
+
+[[menu.home]]
+name = "Github"
+url = "https://github.com/alex-shpak/hugo-book/"
+weight = 20
+
+# Defining any mount replaces Hugo's default mounts, so all of them are listed
+# explicitly here, plus the hugo_stats.json mount used by Tailwind.
+[module]
+[[module.mounts]]
+source = "archetypes"
+target = "archetypes"
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "content"
+target = "content"
+
+[[module.mounts]]
+source = "data"
+target = "data"
+
+[[module.mounts]]
+disableWatch = true
+source = "hugo_stats.json"
+target = "assets/notwatching/hugo_stats.json"
+
+[[module.mounts]]
+source = "i18n"
+target = "i18n"
+
+[[module.mounts]]
+source = "layouts"
+target = "layouts"
+
+[[module.mounts]]
+source = "static"
+target = "static"
+
+[params]
+BookComments = false
+BookDateFormat = "2 January 2006"
+# BookEditLink = 'https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/{{ .Path }}'
+# BookLastChangeLink = 'https://github.com/alex-shpak/hugo-book/commit/{{ .GitInfo.Hash }}'
+
+# (Optional, default none) Set the path to a logo for the book.
+# If the logo is /static/logo.png then the path would be logo.png
+# BookLogo = "/logo.png"
+
+BookPortableLinks = "warning"
+BookSearch = true
+BookServiceWorker = false
+BookTheme = "contrast-auto"
+
+[security]
+[security.exec]
+allow = [
+  '^(dart-)?sass$',
+  '^go$',
+  '^git$',
+  '^node$',
+  '^postcss$',
+  '^tailwindcss$',
+]
+
+[taxonomies]
+tag = "tags"
