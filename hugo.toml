@@ -53,7 +53,7 @@ startLevel = 1
 [menu]
 [[menu.after]]
 name = "Github"
-url = "https://github.com/alex-shpak/hugo-book"
+url = "https://github.com/fywk/myjourney-dev-docs"
 weight = 10
 
 # [[menu.before]]
@@ -65,7 +65,7 @@ weight = 10
 
 [[menu.home]]
 name = "Github"
-url = "https://github.com/alex-shpak/hugo-book/"
+url = "https://github.com/fywk/myjourney-dev-docs"
 weight = 20
 
 # Defining any mount replaces Hugo's default mounts, so all of them are listed
@@ -105,6 +105,7 @@ source = "static"
 target = "static"
 
 [params]
+BookBreadcrumbs = true
 BookComments = false
 BookDateFormat = "2 January 2006"
 # BookEditLink = 'https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/{{ .Path }}'
@@ -117,7 +118,7 @@ BookDateFormat = "2 January 2006"
 BookPortableLinks = "warning"
 BookSearch = true
 BookServiceWorker = false
-BookTheme = "contrast-auto"
+BookTheme = "contrast-dark"
 
 [security]
 [security.exec]
