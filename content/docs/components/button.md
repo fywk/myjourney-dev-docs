@@ -97,3 +97,13 @@ Set `pill` to `True` for fully rounded ends.
 | `focus_outline` | bool | True    | `True` `False`            | Show a dashed outline when focused with the keyboard.                                           |
 | `pill`          | bool | False   | `True` `False`            | Use fully rounded ends instead of the default radius.                                           |
 | `class`         | str  | -       | -                         | Extra classes, merged with the defaults (later classes win).                                    |
+
+You can add any standard HTML attribute, such as `target` or `rel`, and it will be passed through to the rendered element.
+
+```html
+<c-button href="https://example.org" target="_blank" rel="noopener noreferrer">External Site</c-button>
+
+<!-- html output
+<a href="https://example.org" target="_blank" rel="noopener noreferrer">External Site</a>
+-->
+```
