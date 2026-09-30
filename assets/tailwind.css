@@ -4,6 +4,8 @@
 
 @source "hugo_stats.json";
 
+@source not inline("container");
+
 @custom-variant prose-inline-code {
   &.prose :where(:not(pre) > code):not(:where([class~="not-prose"] *)) {
     @slot;
