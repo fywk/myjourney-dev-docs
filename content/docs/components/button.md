@@ -29,6 +29,17 @@ A customizable button component.
 <c-button variant="text">Text</c-button>
 ```
 
+You can customize any variant's default styles by passing Tailwind CSS classes. For example, to change the `background-color`:
+
+<div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-zinc-700 p-8">
+  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-linear-to-r from-[#4939d5] to-[#9c41d9] px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Customized Button</button>
+</div>
+
+
+```html
+<c-button class="bg-linear-to-r from-[#4939d5] to-[#9c41d9] ...">Customized Button</c-button>
+```
+
 ## Sizes
 
 <div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-zinc-700 p-8">
