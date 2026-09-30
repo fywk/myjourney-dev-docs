@@ -5,8 +5,8 @@ A customizable button component.
 ## Basic Usage
 
 <div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-gray-700 p-8">
-<button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Button</button>
-<a href="#" class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Link Button</a>
+  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Button</button>
+  <a href="#" class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Link Button</a>
 </div>
 
 ```html
@@ -20,8 +20,8 @@ A customizable button component.
 ## Variants
 
 <div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-gray-700 p-8">
-<button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
-<button class="flex h-10 items-center justify-center rounded-[1.2ch] px-0 py-0 text-base font-semibold outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:underline focus-visible:outline-3 active:scale-95">Text</button>
+  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
+  <button class="flex h-fit items-center justify-center rounded-none px-0 text-base font-semibold outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:underline focus-visible:outline-3 active:scale-none">Text</button>
 </div>
 
 ```html
@@ -32,10 +32,10 @@ A customizable button component.
 ## Sizes
 
 <div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-gray-700 p-8">
-  <button class="flex h-6 items-center justify-center rounded-[1.2ch] bg-rose-700 px-3 text-xs font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Small</button>
-  <button class="flex h-8 items-center justify-center rounded-[1.2ch] bg-rose-700 px-3.5 text-sm font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Medium</button>
-  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
-  <button class="flex h-12 items-center justify-center rounded-[1.2ch] bg-rose-700 px-5 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Extra Large</button>
+  <button class="flex h-6 items-center justify-center rounded-[1.2ch] bg-rose-700 px-3 text-xs font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Small</button>
+  <button class="flex h-8 items-center justify-center rounded-[1.2ch] bg-rose-700 px-3.5 text-sm font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Medium</button>
+  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
+  <button class="flex h-12 items-center justify-center rounded-[1.2ch] bg-rose-700 px-5 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Extra Large</button>
 </div>
 
 ```html
@@ -50,7 +50,7 @@ A customizable button component.
 By default, buttons show a dashed outline, offset from the button, when focused with the keyboard. Set `focus_outline` to `False` to remove it.
 
 <div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-gray-700 p-8">
-  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default: With Focus Outline</button>
+  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default: With Focus Outline</button>
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus:outline-hidden focus-visible:outline-rose-600 active:scale-95">No Focus Outline</button>
 </div>
 
@@ -64,8 +64,8 @@ By default, buttons show a dashed outline, offset from the button, when focused 
 Set `pill` to `True` for fully rounded ends.
 
 <div class="preview not-prose flex items-center justify-center gap-4 border border-b-0 border-gray-700 p-8">
-  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
-  <button class="flex h-10 items-center justify-center rounded-full bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Pill-Shaped Button</button>
+  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
+  <button class="flex h-10 items-center justify-center rounded-full bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Pill-Shaped Button</button>
 </div>
 
 ```html
@@ -77,9 +77,12 @@ Set `pill` to `True` for fully rounded ends.
 
 ### Props
 
-| Prop            | Type | Default | Description                               |
-| --------------- | ---- | ------- | ----------------------------------------- |
-| `variant`       | str  | primary | Visual style. One of `primary` or `text`. |
-| `size`          | str  | lg      | The size of the button.                   |
-| `focus_outline` | bool | True    | The size of the button.                   |
-| `pill`          | bool | False   | The size of the button.                   |
+| Prop            | Type | Default | Options                   | Description                                                                                     |
+| --------------- | ---- | ------- | ------------------------- | ----------------------------------------------------------------------------------------------- |
+| `href`          | str  | -       | -                         | When set, renders an `<a>` instead of a `<button>`.                                             |
+| `type`          | str  | button  | `button` `submit` `reset` | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
+| `variant`       | str  | primary | `primary` `text`          | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
+| `size`          | str  | lg      | `sm` `md` `lg` `xl`       | The size of the button.                                                                         |
+| `focus_outline` | bool | True    | `True` `False`            | Show a dashed outline when focused with the keyboard.                                           |
+| `pill`          | bool | False   | `True` `False`            | Use fully rounded ends instead of the default radius.                                           |
+| `class`         | str  | -       | -                         | Extra classes, merged with the defaults (later classes win).                                    |
