@@ -74,6 +74,9 @@ You can customize the button styles with `variant="custom"` and passing Tailwind
 
 By default, buttons show a dashed outline, offset from the button, when focused with the keyboard. Set `focus_outline` to `False` to remove it.
 
+> [!TIP]
+> Press <kbd>Tab</kbd> to move focus to each button and compare the two.
+
 {{< component-preview >}}
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">With Focus Outline</button>
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white transition-[background-color,border-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus:outline-hidden focus-visible:outline-rose-600 active:scale-95">No Focus Outline</button>
