@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "hugo server"
+    "dev": "hugo server --gc"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
