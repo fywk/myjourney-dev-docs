@@ -31,17 +31,18 @@ A customizable button component.
 <c-button variant="text" class="text-gray-50">Text</c-button>
 ```
 
-You can customize the button styles with `variant="custom"` and passing Tailwind CSS classes. Use this for any style the built-in variants don't support. For example:
+If you need a style the built-in variants don't cover, use `variant="custom"` and pass your own Tailwind CSS classes. The `custom` variant applies no variant styles (colours), so you have full control over the look. For example:
 
 {{< component-preview >}}
-  <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-fuchsia-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-fuchsia-800 focus-visible:outline-3 focus-visible:outline-fuchsia-600 active:scale-95">Fuchsia</button>
+  <button class="flex h-8 items-center justify-center rounded-[1.2ch] bg-fuchsia-700 px-3.5 text-sm font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-fuchsia-800 focus-visible:outline-3 focus-visible:outline-fuchsia-600 active:scale-95">Fuchsia</button>
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-linear-to-r from-[#4939d5] to-[#9c41d9] px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] focus-visible:outline-3 active:scale-95">Gradient</button>
 {{< /component-preview >}}
 
 
-```html {hl_Lines=["2-3","8-9"]}
+```html {hl_Lines=["2-4","9-10"]}
 <c-button
   variant="custom"
+  size="md"
   class="bg-fuchsia-700 text-white hover:bg-fuchsia-800 focus-visible:outline-fuchsia-600 ..."
 >
   Fuchsia
@@ -113,7 +114,7 @@ Set `pill` to `True` for fully rounded ends.
 | `size`          | str  | lg      | `sm` `md` `lg` `xl`               | The size of the button.                                                                         |
 | `focus_outline` | bool | True    | `True` `False`                    | Show a dashed outline when focused with the keyboard.                                           |
 | `pill`          | bool | False   | `True` `False`                    | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                                 | Extra classes, merged with the defaults (later classes win).                                    |
+| `class`         | str  | -       | -                                 | Extra classes, merged with the defaults.                                                        |
 
 You can add any standard HTML attribute, such as `target` or `rel`, and it will be passed through to the rendered element.
 
