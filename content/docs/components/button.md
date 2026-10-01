@@ -22,16 +22,16 @@ A customizable button component.
 {{< component-preview >}}
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95">Default</button>
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] border border-gray-200 bg-white px-4 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:border-gray-400 hover:bg-gray-50 focus-visible:border-gray-400 focus-visible:outline-3 active:scale-95">White</button>
-  <button class="flex h-fit items-center justify-center rounded-none px-0 text-base font-semibold text-green-400 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:underline focus-visible:outline-3 focus-visible:outline-current active:scale-none">Text</button>
+  <button class="flex h-auto items-center justify-center rounded-none px-0 text-base font-semibold text-gray-50 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:underline focus-visible:outline-3 focus-visible:outline-current active:scale-none">Text</button>
 {{< /component-preview >}}
 
 ```html
 <c-button variant="primary">Default</c-button>
 <c-button variant="white">White</c-button>
-<c-button variant="text" class="text-green-400">Text</c-button>
+<c-button variant="text" class="text-gray-50">Text</c-button>
 ```
 
-You can customize the button styles with `variant="custom"` and passing Tailwind CSS classes. For example:
+You can customize the button styles with `variant="custom"` and passing Tailwind CSS classes. Use this for any style the built-in variants don't support. For example:
 
 {{< component-preview >}}
   <button class="flex h-10 items-center justify-center rounded-[1.2ch] bg-fuchsia-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:bg-fuchsia-800 focus-visible:outline-3 focus-visible:outline-fuchsia-600 active:scale-95">Fuchsia</button>
@@ -102,15 +102,15 @@ Set `pill` to `True` for fully rounded ends.
 
 ### Props
 
-| Prop            | Type | Default | Options                   | Description                                                                                     |
-| --------------- | ---- | ------- | ------------------------- | ----------------------------------------------------------------------------------------------- |
-| `href`          | str  | -       | -                         | When set, renders an `<a>` instead of a `<button>`.                                             |
-| `type`          | str  | button  | `button` `submit` `reset` | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
-| `variant`       | str  | primary | `primary` `text`          | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
-| `size`          | str  | lg      | `sm` `md` `lg` `xl`       | The size of the button.                                                                         |
-| `focus_outline` | bool | True    | `True` `False`            | Show a dashed outline when focused with the keyboard.                                           |
-| `pill`          | bool | False   | `True` `False`            | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                         | Extra classes, merged with the defaults (later classes win).                                    |
+| Prop            | Type | Default | Options                           | Description                                                                                     |
+| --------------- | ---- | ------- | --------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `href`          | str  | -       | -                                 | When set, renders an `<a>` instead of a `<button>`.                                             |
+| `type`          | str  | button  | `button` `submit` `reset`         | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
+| `variant`       | str  | primary | `primary` `white` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
+| `size`          | str  | lg      | `sm` `md` `lg` `xl`               | The size of the button.                                                                         |
+| `focus_outline` | bool | True    | `True` `False`                    | Show a dashed outline when focused with the keyboard.                                           |
+| `pill`          | bool | False   | `True` `False`                    | Use fully rounded ends instead of the default radius.                                           |
+| `class`         | str  | -       | -                                 | Extra classes, merged with the defaults (later classes win).                                    |
 
 You can add any standard HTML attribute, such as `target` or `rel`, and it will be passed through to the rendered element.
 
