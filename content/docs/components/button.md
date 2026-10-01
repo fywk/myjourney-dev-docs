@@ -26,7 +26,7 @@ A customizable button component.
 {{< /component-preview >}}
 
 ```html
-<c-button variant="primary">Default</c-button>
+<c-button>Default</c-button>
 <c-button variant="white">White</c-button>
 <c-button variant="text" class="text-gray-50">Text</c-button>
 ```
@@ -77,7 +77,7 @@ If you need a style the built-in variants don't cover, use `variant="custom"` an
 
 By default, buttons show a dashed outline, offset from the button, when focused with the keyboard. Set `focus_outline` to `False` to remove it.
 
-> [!TIP]
+> [!NOTE]
 > Press <kbd>Tab</kbd> to move focus to each button and compare the two.
 
 {{< component-preview >}}
@@ -112,7 +112,7 @@ Set `pill` to `True` for fully rounded ends.
 | --------------- | ---- | ------- | --------------------------------- | ----------------------------------------------------------------------------------------------- |
 | `href`          | str  | -       | -                                 | When set, renders an `<a>` instead of a `<button>`.                                             |
 | `type`          | str  | button  | `button` `submit` `reset`         | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
-| `variant`       | str  | primary | `primary` `white` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
+| `variant`       | str  | default | `default` `white` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
 | `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`          | The size of the button.                                                                         |
 | `focus_outline` | bool | True    | `True` `False`                    | Show a dashed outline when focused with the keyboard.                                           |
 | `pill`          | bool | False   | `True` `False`                    | Use fully rounded ends instead of the default radius.                                           |
