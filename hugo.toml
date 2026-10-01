@@ -118,7 +118,7 @@ BookDateFormat = "2 January 2006"
 BookPortableLinks = "warning"
 BookSearch = true
 BookServiceWorker = false
-BookTheme = "ayu-dark"
+BookTheme = "contrast-dark"
 
 [security]
 [security.exec]
