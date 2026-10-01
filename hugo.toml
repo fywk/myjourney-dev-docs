@@ -1,5 +1,5 @@
 baseURL = "http://0.0.0.0:1313/"
-copyright = "This is a copyright placeholder"
+# copyright = "This is a copyright placeholder"
 # Book configuration
 disablePathToLower = true
 enableGitInfo = true
@@ -16,27 +16,6 @@ target = 'css'
 [[build.cachebusters]]
 source = '(postcss|tailwind)\.config\.js'
 target = 'css'
-
-# Multi-lingual mode config
-# There are different options to translate files
-# See https://gohugo.io/content-management/multilingual/#translation-by-filename
-# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
-# [languages]
-#   [languages.en]
-#     contentDir = "content"
-#     languageName = "English"
-#     weight = 1
-#
-#   [languages.he]
-#     contentDir = "content.he"
-#     languageDirection = "rtl"
-#     languageName = "Hebrew"
-#     weight = 3
-#
-#   [languages.zh]
-#     contentDir = "content.zh"
-#     languageName = "Chinese"
-#     weight = 2
 
 [markup]
 # Needed for mermaid/katex shortcodes
@@ -107,9 +86,9 @@ target = "static"
 [params]
 BookBreadcrumbs = true
 BookComments = false
-BookDateFormat = "2 January 2006"
-# BookEditLink = 'https://github.com/alex-shpak/hugo-book/edit/main/exampleSite/{{ .Path }}'
-# BookLastChangeLink = 'https://github.com/alex-shpak/hugo-book/commit/{{ .GitInfo.Hash }}'
+BookDateFormat = "2 January 2006, 3:04 PM"
+# BookEditLink = 'https://github.com/fywk/myjourney-dev-docs/commit/{{ .Path }}'
+BookLastChangeLink = 'https://github.com/fywk/myjourney-dev-docs/commit/{{ .GitInfo.Hash }}'
 
 # (Optional, default none) Set the path to a logo for the book.
 # If the logo is /static/logo.png then the path would be logo.png
