@@ -9,6 +9,8 @@
 @source not inline("container");
 
 @theme {
+  --color-myjourney: #961a37;
+
   --font-sans:
     "Roboto", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
