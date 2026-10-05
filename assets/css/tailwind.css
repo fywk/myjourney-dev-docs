@@ -4,7 +4,7 @@
 
 @plugin "@tailwindcss/typography";
 
-@source "hugo_stats.json";
+@source "../../hugo_stats.json";
 
 @source not inline("container");
 
