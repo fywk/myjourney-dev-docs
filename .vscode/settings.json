@@ -1,4 +1,7 @@
 {
   "editor.formatOnSave": true,
   "html.validate.scripts": false,
+  "[markdown]": {
+    "editor.formatOnSave": false
+  }
 }
