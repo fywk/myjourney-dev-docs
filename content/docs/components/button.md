@@ -108,6 +108,32 @@ Set `pill` to `True` for fully rounded ends.
 <c-button pill>Pill-Shaped Button</c-button>
 ```
 
+## Icons
+
+Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). The icon will be rendered before the button label.
+
+{{< component-preview >}}
+<button class="flex aspect-square h-10 items-center justify-center gap-x-[.4em] rounded-full border border-gray-200 bg-white px-0 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed [text-box:trim-both_cap_alphabetic] hover:border-gray-300 hover:bg-gray-50 focus-visible:border-gray-300 focus-visible:outline-3 active:scale-95" aria-label="Next"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6l-6 6"></path></svg></button>
+<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,border-color,scale] duration-300 [text-box:trim-both_cap_alphabetic] hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 active:scale-95"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>New Project</button>
+{{< /component-preview >}}
+
+```html {hl_lines=["2-4","7-9"]}
+<c-button variant="white" pill class="aspect-square px-0" aria-label="Next">
+  <c-slot name="icon">
+    <c-tablericon.chevron-right class="size-6" />
+  </c-slot>
+</c-button>
+<c-button>
+  <c-slot name="icon">
+    <c-tablericon.plus class="size-6" />
+  </c-slot>
+  New Project
+</c-button>
+```
+
+> [!NOTE]
+> Icon-only buttons should have an `aria-label` so screen readers can announce them.
+
 ## API Reference
 
 ### Props
