@@ -24,7 +24,7 @@ target = 'css'
 unsafe = true
 
 [markup.highlight]
-style = "base16-snazzy"
+noClasses = false
 
 [markup.tableOfContents]
 startLevel = 1
