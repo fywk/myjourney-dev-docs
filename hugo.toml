@@ -97,7 +97,7 @@ BookLastChangeLink = 'https://github.com/fywk/myjourney-dev-docs/commit/{{ .GitI
 BookPortableLinks = "warning"
 BookSearch = true
 BookServiceWorker = false
-BookTheme = "contrast-dark"
+BookTheme = "contrast-auto"
 
 [security]
 [security.exec]
