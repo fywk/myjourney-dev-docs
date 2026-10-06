@@ -17,6 +17,10 @@ target = 'css'
 source = '(postcss|tailwind)\.config\.js'
 target = 'css'
 
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
+
 [markup]
 # Needed for mermaid/katex shortcodes
 [markup.goldmark]
