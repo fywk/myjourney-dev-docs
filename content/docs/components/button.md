@@ -21,13 +21,15 @@ A customizable button component.
 
 {{< component-preview >}}
 <button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Default</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] border border-gray-200 bg-white px-4 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:border-gray-300 hover:bg-gray-50 focus-visible:border-gray-300 focus-visible:outline-3 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">White</button>
+<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-gray-900 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-gray-800 focus-visible:outline-3 focus-visible:outline-gray-800 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Dark</button>
+<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] border border-gray-200 bg-white px-4 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:border-gray-300 hover:bg-gray-50 focus-visible:border-gray-300 focus-visible:outline-3 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Light</button>
 <button class="flex h-auto items-center justify-center gap-x-[.4em] rounded-none px-0 text-base font-semibold text-gray-950 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:underline focus-visible:outline-3 focus-visible:outline-current active:scale-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:text-gray-50">Text</button>
 {{< /component-preview >}}
 
 ```html
 <c-button>Default</c-button>
-<c-button variant="white">White</c-button>
+<c-button variant="dark">Dark</c-button>
+<c-button variant="light">Light</c-button>
 <c-button variant="text" class="text-gray-950 dark:text-gray-50">Text</c-button>
 ```
 
@@ -133,7 +135,7 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 {{< /component-preview >}}
 
 ```html {hl_lines=["2-4","7-9"]}
-<c-button variant="white" pill class="aspect-square px-0" aria-label="Next">
+<c-button variant="light" pill class="aspect-square px-0" aria-label="Next">
   <c-slot name="icon">
     <c-tablericon.chevron-right class="size-6" />
   </c-slot>
@@ -153,16 +155,16 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 
 ### Props
 
-| Prop            | Type | Default | Options                           | Description                                                                                     |
-| --------------- | ---- | ------- | --------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `href`          | str  | -       | -                                 | When set, renders an `<a>` instead of a `<button>`.                                             |
-| `type`          | str  | button  | `button` `submit` `reset`         | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
-| `variant`       | str  | default | `default` `white` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
-| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`          | The size of the button.                                                                         |
-| `focus_outline` | bool | True    | `True` `False`                    | Show a dashed outline when focused with the keyboard.                                           |
-| `pill`          | bool | False   | `True` `False`                    | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                                 | Extra classes. Utility classes override the component's styles.                                 |
-| `disabled`      | bool | False   | `True` `False`                    | Disable the button. Ignored when `href` is set.                                                 |
+| Prop            | Type | Default | Options                                  | Description                                                                                     |
+| --------------- | ---- | ------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `href`          | str  | -       | -                                        | When set, renders an `<a>` instead of a `<button>`.                                             |
+| `type`          | str  | button  | `button` `submit` `reset`                | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
+| `variant`       | str  | default | `default` `dark` `light` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
+| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                 | The size of the button.                                                                         |
+| `focus_outline` | bool | True    | `True` `False`                           | Show a dashed outline when focused with the keyboard.                                           |
+| `pill`          | bool | False   | `True` `False`                           | Use fully rounded ends instead of the default radius.                                           |
+| `class`         | str  | -       | -                                        | Extra classes. Utility classes override the component's styles.                                 |
+| `disabled`      | bool | False   | `True` `False`                           | Disable the button. Ignored when `href` is set.                                                 |     |
 
 ### Additional attributes
 
