@@ -28,8 +28,16 @@
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+@layer components {
+  @import "./components/c-button.css";
+}
+
 @custom-variant prose-inline-code {
   &.prose :where(:not(pre) > code):not(:where([class~="not-prose"] *)) {
     @slot;
   }
+}
+
+@utility text-trim-both {
+  text-box: trim-both cap alphabetic;
 }

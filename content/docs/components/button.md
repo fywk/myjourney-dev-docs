@@ -5,8 +5,8 @@ A customizable button component.
 ## Basic Usage
 
 {{< component-preview >}}
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,border-color,scale] duration-300 text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Button</button>
-<a href="#" class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,border-color,scale] duration-300 text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Link Button</a>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">Button</button>
+<a href="#" class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">Link Button</a>
 {{< /component-preview >}}
 
 ```html
@@ -20,11 +20,11 @@ A customizable button component.
 ## Variants
 
 {{< component-preview >}}
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Default</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-odyssey-500 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-odyssey-600 focus-visible:outline-3 focus-visible:outline-odyssey-400 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Odyssey</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-gray-900 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-gray-800 focus-visible:outline-3 focus-visible:outline-gray-800 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Dark</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] border border-gray-200 bg-white px-4 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:border-gray-300 hover:bg-gray-50 focus-visible:border-gray-300 focus-visible:outline-3 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Light</button>
-<button class="flex h-auto items-center justify-center gap-x-[.4em] rounded-none px-0 text-base font-semibold text-gray-950 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:underline focus-visible:outline-3 focus-visible:outline-current active:scale-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:text-gray-50">Text</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">Default</button>
+<button class="c-button" data-variant="odyssey" data-size="md" data-focus-outline="true" data-pill="false">Odyssey</button>
+<button class="c-button" data-variant="light" data-size="md" data-focus-outline="true" data-pill="false">Light</button>
+<button class="c-button" data-variant="dark" data-size="md" data-focus-outline="true" data-pill="false">Dark</button>
+<button class="c-button text-gray-950 dark:text-gray-50" data-variant="text" data-size="md" data-focus-outline="true" data-pill="false">Text</button>
 {{< /component-preview >}}
 
 ```html
@@ -43,8 +43,8 @@ A customizable button component.
 If you need a style the built-in variants don't cover, use `variant="custom"` and pass your own Tailwind CSS classes. The `custom` variant applies no variant styles (colours), so you have full control over the look. For example:
 
 {{< component-preview >}}
-<button class="flex h-8 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-fuchsia-700 px-3.5 text-sm font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-fuchsia-800 focus-visible:outline-3 focus-visible:outline-fuchsia-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Fuchsia</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-linear-to-r from-[#4939d5] to-[#9c41d9] px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both focus-visible:outline-3 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Gradient</button>
+<button class="c-button bg-fuchsia-700 text-white hover:bg-fuchsia-800 focus-visible:outline-fuchsia-600" data-variant="custom" data-size="sm" data-focus-outline="true" data-pill="false">Fuchsia</button>
+<button class="c-button bg-linear-to-r from-[#4939d5] to-[#9c41d9] text-white" data-variant="custom" data-size="md" data-focus-outline="true" data-pill="false">Gradient</button>
 {{< /component-preview >}}
 
 ```html {hl_lines=["2-4","9-10"]}
@@ -66,11 +66,11 @@ If you need a style the built-in variants don't cover, use `variant="custom"` an
 ## Sizes
 
 {{< component-preview >}}
-<button class="flex h-6 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-3 text-xs font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Extra Small</button>
-<button class="flex h-8 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-3.5 text-sm font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Small</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Default</button>
-<button class="flex h-12 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-5 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Large</button>
-<button class="flex h-14 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-6 text-lg font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Extra Large</button>
+<button class="c-button" data-variant="default" data-size="xs" data-focus-outline="true" data-pill="false">Extra Small</button>
+<button class="c-button" data-variant="default" data-size="sm" data-focus-outline="true" data-pill="false">Small</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">Default</button>
+<button class="c-button" data-variant="default" data-size="lg" data-focus-outline="true" data-pill="false">Large</button>
+<button class="c-button" data-variant="default" data-size="xl" data-focus-outline="true" data-pill="false">Extra Large</button>
 {{< /component-preview >}}
 
 ```html
@@ -89,8 +89,8 @@ By default, buttons show a dashed outline, offset from the button, when focused 
 > Press <kbd>Tab</kbd> to move focus to each button and compare the two.
 
 {{< component-preview >}}
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">With Focus Outline</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white transition-[background-color,border-color,scale] duration-300 text-trim-both hover:bg-rose-800 focus:outline-hidden focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">No Focus Outline</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">With Focus Outline</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="false" data-pill="false">No Focus Outline</button>
 {{< /component-preview >}}
 
 ```html
@@ -103,8 +103,8 @@ By default, buttons show a dashed outline, offset from the button, when focused 
 Set `pill` to `True` for fully rounded ends.
 
 {{< component-preview >}}
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Default</button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-full bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Pill-Shaped Button</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">Default</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="true">Pill-Shaped Button</button>
 {{< /component-preview >}}
 
 ```html
@@ -117,7 +117,8 @@ Set `pill` to `True` for fully rounded ends.
 Set `disabled` to `True` to disable a button.
 
 {{< component-preview >}}
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,border-color,scale] duration-300 text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50" disabled>Disabled</button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false" disabled>Disabled</button>
+
 {{< /component-preview >}}
 
 ```html
@@ -132,8 +133,8 @@ Set `disabled` to `True` to disable a button.
 Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). The icon will be rendered before the button label.
 
 {{< component-preview >}}
-<button class="flex aspect-square h-10 items-center justify-center gap-x-[.4em] rounded-full border border-gray-200 bg-white px-0 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:border-gray-300 hover:bg-gray-50 focus-visible:border-gray-300 focus-visible:outline-3 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50" aria-label="Next"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6l-6 6"></path></svg></button>
-<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] outline-dashed transition-[background-color,border-color,scale] duration-300 text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>New Project</button>
+<button class="c-button aspect-square px-0" data-variant="light" data-size="md" data-focus-outline="true" data-pill="true" aria-label="Next"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6l-6 6"></path></svg></button>
+<button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>New Project</button>
 {{< /component-preview >}}
 
 ```html {hl_lines=["2-4","7-9"]}
