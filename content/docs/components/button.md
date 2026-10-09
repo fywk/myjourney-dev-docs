@@ -21,6 +21,7 @@ A customizable button component.
 
 {{< component-preview >}}
 <button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-rose-700 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-rose-800 focus-visible:outline-3 focus-visible:outline-rose-600 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Default</button>
+<button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-odyssey-500 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-odyssey-600 focus-visible:outline-3 focus-visible:outline-odyssey-400 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Odyssey</button>
 <button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] bg-gray-900 px-4 text-base font-semibold text-white outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:bg-gray-800 focus-visible:outline-3 focus-visible:outline-gray-800 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Dark</button>
 <button class="flex h-10 items-center justify-center gap-x-[.4em] rounded-[1.5ch] border border-gray-200 bg-white px-4 text-base font-semibold text-gray-900 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:border-gray-300 hover:bg-gray-50 focus-visible:border-gray-300 focus-visible:outline-3 not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50">Light</button>
 <button class="flex h-auto items-center justify-center gap-x-[.4em] rounded-none px-0 text-base font-semibold text-gray-950 outline-0 outline-offset-[.25em] transition-[background-color,border-color,scale] duration-300 outline-dashed text-trim-both hover:underline focus-visible:outline-3 focus-visible:outline-current active:scale-none disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 dark:text-gray-50">Text</button>
@@ -28,6 +29,7 @@ A customizable button component.
 
 ```html
 <c-button>Default</c-button>
+<c-button variant="odyssey">Odyssey</c-button>
 <c-button variant="dark">Dark</c-button>
 <c-button variant="light">Light</c-button>
 <c-button variant="text" class="text-gray-950 dark:text-gray-50">Text</c-button>

@@ -12,6 +12,17 @@
 @theme {
   --color-myjourney: #961a37;
 
+  --color-odyssey-50: #f9f0ff;
+  --color-odyssey-100: #f1d5ff;
+  --color-odyssey-200: #e5b3ff;
+  --color-odyssey-300: #d084ff;
+  --color-odyssey-400: #b544ff;
+  --color-odyssey-500: #9810fa;
+  --color-odyssey-600: #8200db;
+  --color-odyssey-700: #6700b0;
+  --color-odyssey-800: #4e0084;
+  --color-odyssey-900: #360059;
+
   --font-sans:
     "Roboto", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
