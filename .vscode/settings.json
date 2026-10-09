@@ -3,5 +3,8 @@
   "html.validate.scripts": false,
   "[markdown]": {
     "editor.formatOnSave": false
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
   }
 }
