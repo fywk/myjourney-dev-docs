@@ -25,6 +25,8 @@ A customizable button component.
 <button class="c-button" data-variant="invert" data-size="md" data-focus-outline="true" data-pill="false">Invert</button>
 <button class="c-button" data-variant="light" data-size="md" data-focus-outline="true" data-pill="false">Light</button>
 <button class="c-button" data-variant="dark" data-size="md" data-focus-outline="true" data-pill="false">Dark</button>
+<button class="c-button" data-variant="subtle" data-size="md" data-focus-outline="true" data-pill="false">Subtle</button>
+<button class="c-button" data-variant="ghost" data-size="md" data-focus-outline="true" data-pill="false">Ghost</button>
 <button class="c-button text-gray-950 dark:text-gray-50" data-variant="text" data-size="md" data-focus-outline="true" data-pill="false">Text</button>
 {{< /component-preview >}}
 
@@ -32,8 +34,10 @@ A customizable button component.
 <c-button>Default</c-button>
 <c-button variant="odyssey">Odyssey</c-button>
 <c-button variant="invert">Invert</c-button>
-<c-button variant="dark">Dark</c-button>
 <c-button variant="light">Light</c-button>
+<c-button variant="dark">Dark</c-button>
+<c-button variant="subtle">Subtle</c-button>
+<c-button variant="ghost">Ghost</c-button>
 <c-button variant="text" class="text-gray-950 dark:text-gray-50">Text</c-button>
 ```
 
