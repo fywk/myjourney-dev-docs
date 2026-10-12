@@ -44,11 +44,14 @@
   &[data-variant="odyssey"] {
     @apply bg-odyssey-500 text-white hover:bg-odyssey-600 focus-visible:outline-odyssey-400;
   }
-  &[data-variant="dark"] {
-    @apply bg-gray-900 text-white hover:bg-gray-800 focus-visible:outline-gray-800;
+  &[data-variant="invert"] {
+    @apply bg-gray-900 text-white hover:bg-gray-800 focus-visible:outline-gray-800 dark:bg-gray-50 dark:text-gray-950 dark:hover:bg-gray-100 dark:focus-visible:outline-gray-200;
   }
   &[data-variant="light"] {
-    @apply bg-white text-gray-950 hover:bg-gray-50 focus-visible:outline-gray-500;
+    @apply bg-gray-50 text-gray-950 hover:bg-gray-100 focus-visible:outline-gray-200;
+  }
+  &[data-variant="dark"] {
+    @apply bg-gray-900 text-white hover:bg-gray-800 focus-visible:outline-gray-800;
   }
   &[data-variant="text"] {
     @apply h-auto rounded-none px-0 hover:underline focus-visible:outline-current active:scale-none;
