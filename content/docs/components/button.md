@@ -132,7 +132,6 @@ Set `disabled` to `True` to disable a button.
 
 {{< component-preview >}}
 <button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false" disabled>Disabled</button>
-
 {{< /component-preview >}}
 
 ```html
@@ -141,6 +140,26 @@ Set `disabled` to `True` to disable a button.
 
 > [!NOTE]
 > The `disabled` prop has no effect on link buttons (when `href` is set).
+
+### Alpine.js support
+
+{{< component-preview >}}
+<div class="flex gap-x-4">
+  <button type="button" class="c-button" data-variant="default" data-size="md" data-pill="false" data-focus-outline="true" disabled>
+    Submit
+  </button>
+  <button type="button" class="c-button" data-variant="ghost" data-size="md" data-pill="false" data-focus-outline="true" onclick="const b = this.previousElementSibling; b.disabled = !b.disabled">
+    Toggle disabled
+  </button>
+</div>
+{{< /component-preview >}}
+
+```html
+<div x-data="{ disabled: true }" class="flex gap-x-4">
+  <c-button ::disabled="disabled">Submit</c-button>
+  <c-button @click="disabled = !disabled" variant="ghost">Toggle disabled</c-button>
+</div>
+```
 
 ## Icons
 
