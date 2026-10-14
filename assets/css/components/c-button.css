@@ -1,6 +1,6 @@
 .c-button {
   /* Base style */
-  @apply flex items-center justify-center gap-x-[.4em] font-semibold transition-[background-color,border-color,scale] duration-300 text-trim-both not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50;
+  @apply flex items-center justify-center gap-x-[.35em] font-semibold transition-[background-color,border-color,scale] duration-300 text-trim-both not-disabled:active:scale-95 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50;
 
   /* ---------------------------------------------------------------------- */
 

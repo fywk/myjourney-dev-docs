@@ -141,37 +141,17 @@ Set `disabled` to `True` to disable a button.
 > [!NOTE]
 > The `disabled` prop has no effect on link buttons (when `href` is set).
 
-### Alpine.js support
-
-{{< component-preview >}}
-<div class="flex gap-x-4">
-  <button type="button" class="c-button" data-variant="default" data-size="md" data-pill="false" data-focus-outline="true" disabled>
-    Submit
-  </button>
-  <button type="button" class="c-button" data-variant="ghost" data-size="md" data-pill="false" data-focus-outline="true" onclick="const b = this.previousElementSibling; b.disabled = !b.disabled">
-    Toggle disabled
-  </button>
-</div>
-{{< /component-preview >}}
-
-```html
-<div x-data="{ disabled: true }" class="flex gap-x-4">
-  <c-button ::disabled="disabled">Submit</c-button>
-  <c-button @click="disabled = !disabled" variant="ghost">Toggle disabled</c-button>
-</div>
-```
-
 ## Icons
 
 Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). The icon will be rendered before the button label.
 
 {{< component-preview >}}
-<button class="c-button aspect-square px-0" data-variant="light" data-size="md" data-focus-outline="true" data-pill="true" aria-label="Next"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6l-6 6"></path></svg></button>
+<button class="c-button aspect-square px-0" data-variant="invert" data-size="md" data-focus-outline="true" data-pill="true" aria-label="Next"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6l-6 6"></path></svg></button>
 <button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>New Project</button>
 {{< /component-preview >}}
 
 ```html {hl_lines=["2-4","7-9"]}
-<c-button variant="light" pill class="aspect-square px-0" aria-label="Next">
+<c-button variant="invert" pill class="aspect-square px-0" aria-label="Next">
   <c-slot name="icon">
     <c-tablericon.chevron-right class="size-6" />
   </c-slot>
@@ -186,6 +166,8 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 
 > [!NOTE]
 > Icon-only buttons should have an `aria-label` so screen readers can announce them.
+
+---
 
 ## API Reference
 
@@ -214,4 +196,29 @@ You can add any standard HTML attribute, such as `target` or `rel`, and it will 
 <!-- html output
 <a href="https://example.org" target="_blank" rel="noopener noreferrer" class="c-button" data-variant="default" data-size="md" data-pill="false" data-focus-outline="true">External Site</a>
 -->
+```
+
+### Alpine.js support
+
+Alpine directives work on `<c-button>` like on any other element, with one catch for `x-bind`:
+
+- **`x-bind` shorthand**: Cotton evaluates `:disabled="..."` as a Python expression, so escape it with a second colon (`::disabled="disabled"`). The long form `x-bind:disabled` does not require escaping.
+- **`x-on` shorthand**: `@click="..."` works as written.
+
+{{< component-preview >}}
+<div class="flex gap-x-4">
+  <button type="button" class="c-button" data-variant="default" data-size="md" data-pill="false" data-focus-outline="true" disabled>
+    Submit
+  </button>
+  <button type="button" class="c-button" data-variant="invert" data-size="md" data-pill="false" data-focus-outline="true" onclick="const b = this.previousElementSibling; b.disabled = !b.disabled">
+    Toggle disabled
+  </button>
+</div>
+{{< /component-preview >}}
+
+```html {hl_lines=[2,3]}
+<div x-data="{ disabled: true }" class="flex gap-x-4">
+  <c-button ::disabled="disabled">Submit</c-button>
+  <c-button @click="disabled = !disabled" variant="invert">Toggle disabled</c-button>
+</div>
 ```
