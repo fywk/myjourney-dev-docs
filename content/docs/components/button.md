@@ -50,7 +50,7 @@ A customizable button component.
 ```
 
 > [!NOTE]
-> The `text` variant has no fill, border, fixed height or horizontal padding, and the text colour is inherited.
+> The `text` variant has no fill, border, rounded corners, fixed height or horizontal padding. It underlines on hover and inherits its text colour.
 
 ### Custom variant
 
@@ -191,16 +191,16 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 
 ### Props
 
-| Prop            | Type | Default | Options                                  | Description                                                                                     |
-| --------------- | ---- | ------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `href`          | str  | -       | -                                        | When set, renders an `<a>` instead of a `<button>`.                                             |
-| `type`          | str  | button  | `button` `submit` `reset`                | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
-| `variant`       | str  | default | `default` `dark` `light` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
-| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                 | The size of the button.                                                                         |
-| `focus_outline` | bool | True    | `True` `False`                           | Show a dashed outline when focused with the keyboard.                                           |
-| `pill`          | bool | False   | `True` `False`                           | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                                        | Extra classes. Utility classes override the component's styles.                                 |
-| `disabled`      | bool | False   | `True` `False`                           | Disable the button. Ignored when `href` is set.                                                 |     |
+| Prop            | Type | Default | Options                                                                               | Description                                                                                     |
+| --------------- | ---- | ------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `href`          | str  | -       | -                                                                                     | When set, renders an `<a>` instead of a `<button>`.                                             |
+| `type`          | str  | button  | `button` `submit` `reset`                                                             | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
+| `variant`       | str  | default | `default` `odyssey` `danger` `invert` `light` `dark` `subtle` `ghost` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
+| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                                                              | The size of the button.                                                                         |
+| `focus_outline` | bool | True    | `True` `False`                                                                        | Show a dashed outline when focused with the keyboard.                                           |
+| `pill`          | bool | False   | `True` `False`                                                                        | Use fully rounded ends instead of the default radius.                                           |
+| `class`         | str  | -       | -                                                                                     | Extra classes. Utility classes override the component's styles.                                 |
+| `disabled`      | bool | False   | `True` `False`                                                                        | Disable the button. Ignored when `href` is set.                                                 |
 
 ### Additional attributes
 
