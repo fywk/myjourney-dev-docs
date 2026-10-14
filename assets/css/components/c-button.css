@@ -57,7 +57,7 @@
     @apply bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-800;
   }
   &[data-variant="subtle"] {
-    @apply bg-gray-100 text-gray-700 hover:bg-gray-200 focus-visible:outline-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800 dark:focus-visible:outline-gray-400;
+    @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus-visible:outline-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus-visible:outline-gray-400;
   }
   &[data-variant="ghost"] {
     @apply text-gray-950 hover:bg-gray-100 focus-visible:outline-gray-800 dark:text-gray-50 dark:hover:bg-gray-900 dark:focus-visible:outline-gray-200;
