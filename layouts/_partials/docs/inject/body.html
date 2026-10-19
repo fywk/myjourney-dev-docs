@@ -1,0 +1,31 @@
+{{- if and .IsPage (eq .Type "docs") }}
+<script>
+(() => {
+  const KEY = 'preview-theme-inverted';
+  const mq = matchMedia('(prefers-color-scheme: dark)');
+
+  let inverted = false;
+  try { inverted = sessionStorage.getItem(KEY) === '1'; } catch {}
+
+  const apply = () => {
+    const theme = inverted ? (mq.matches ? 'light' : 'dark') : 'system';
+    document.querySelectorAll('[data-preview-theme]').forEach((el) => {
+      el.setAttribute('data-preview-theme', theme);
+    });
+    document.querySelectorAll('[data-preview-toggle]').forEach((btn) => {
+      btn.setAttribute('aria-pressed', inverted);
+    });
+  };
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('[data-preview-toggle]')) return;
+    inverted = !inverted;
+    try { sessionStorage.setItem(KEY, inverted ? '1' : '0'); } catch {}
+    apply();
+  });
+
+  mq.addEventListener('change', apply);
+  document.addEventListener('DOMContentLoaded', apply);
+})();
+</script>
+{{- end }}
