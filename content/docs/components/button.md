@@ -54,6 +54,20 @@ A customizable button component.
 > [!NOTE]
 > The `text` variant has no fill, border, rounded corners, fixed height or horizontal padding. It underlines on hover and inherits its text colour.
 
+### Customizations
+
+Each variant can be further customized, for example:
+
+{{< component-preview >}}
+<button class="c-button text-rose-500 dark:text-rose-400 focus-visible:outline-current" data-variant="subtle" data-size="md" data-focus-outline="true" data-pill="false">Custom Subtle</button>
+{{< /component-preview >}}
+
+```html {hl_lines=1}
+<c-button variant="subtle" class="text-rose-500 dark:text-rose-400 focus-visible:outline-current">
+  Custom Subtle
+</c-button>
+```
+
 ### Custom variant
 
 If you need a style the built-in variants don't cover, use `variant="custom"` and pass your own Tailwind CSS classes. The `custom` variant applies no variant styles (colours), so you have full control over the look. For example:
@@ -148,14 +162,14 @@ Set `disabled` to `True` to disable a button.
 Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). The icon will be rendered before the button label.
 
 {{< component-preview >}}
-<button class="c-button aspect-square px-0" data-variant="invert" data-size="md" data-focus-outline="true" data-pill="true" aria-label="Next"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 6l6 6l-6 6"></path></svg></button>
+<button class="c-button aspect-square px-0" data-variant="invert" data-size="md" data-focus-outline="true" data-pill="true" aria-label="New"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg></button>
 <button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false"><svg class="size-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l0 14"></path><path d="M5 12l14 0"></path></svg>New Project</button>
 {{< /component-preview >}}
 
 ```html {hl_lines=["2-4","7-9"]}
-<c-button variant="invert" pill class="aspect-square px-0" aria-label="Next">
+<c-button variant="invert" pill class="aspect-square px-0" aria-label="New">
   <c-slot name="icon">
-    <c-tablericon.chevron-right class="size-6" />
+    <c-tablericon.plus class="size-6" />
   </c-slot>
 </c-button>
 <c-button>
