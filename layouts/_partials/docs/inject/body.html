@@ -1,31 +1,36 @@
 {{- if and .IsPage (eq .Type "docs") }}
-<script>
-(() => {
-  const KEY = 'preview-theme-inverted';
-  const mq = matchMedia('(prefers-color-scheme: dark)');
+  <script>
+    (() => {
+      const KEY = "preview-theme-inverted";
+      const mq = matchMedia("(prefers-color-scheme: dark)");
 
-  let inverted = false;
-  try { inverted = sessionStorage.getItem(KEY) === '1'; } catch {}
+      let inverted = false;
+      try {
+        inverted = sessionStorage.getItem(KEY) === "1";
+      } catch {}
 
-  const apply = () => {
-    const theme = inverted ? (mq.matches ? 'light' : 'dark') : 'system';
-    document.querySelectorAll('[data-preview-theme]').forEach((el) => {
-      el.setAttribute('data-preview-theme', theme);
-    });
-    document.querySelectorAll('[data-preview-toggle]').forEach((btn) => {
-      btn.setAttribute('aria-pressed', inverted);
-    });
-  };
+      const apply = () => {
+        const theme = inverted ? (mq.matches ? "light" : "dark") : "system";
+        document.querySelectorAll("[data-preview-theme]").forEach((el) => {
+          el.setAttribute("data-preview-theme", theme);
+        });
+        document.querySelectorAll("[data-preview-toggle]").forEach((btn) => {
+          btn.setAttribute("aria-pressed", inverted);
+        });
+      };
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('[data-preview-toggle]')) return;
-    inverted = !inverted;
-    try { sessionStorage.setItem(KEY, inverted ? '1' : '0'); } catch {}
-    apply();
-  });
+      apply(); // body is already parsed at this point
 
-  mq.addEventListener('change', apply);
-  document.addEventListener('DOMContentLoaded', apply);
-})();
-</script>
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest("[data-preview-toggle]")) return;
+        inverted = !inverted;
+        try {
+          sessionStorage.setItem(KEY, inverted ? "1" : "0");
+        } catch {}
+        apply();
+      });
+
+      mq.addEventListener("change", apply);
+    })();
+  </script>
 {{- end }}
