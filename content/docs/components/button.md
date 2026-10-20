@@ -59,11 +59,14 @@ A customizable button component.
 Each variant can be further customized, for example:
 
 {{< component-preview >}}
-<button class="c-button text-rose-500 dark:text-rose-400 focus-visible:outline-current" data-variant="subtle" data-size="md" data-focus-outline="true" data-pill="false">Custom Subtle</button>
+<button class="c-button text-green-500 dark:text-green-400 focus-visible:outline-current" data-variant="subtle" data-size="md" data-focus-outline="true" data-pill="false">Custom Subtle</button>
 {{< /component-preview >}}
 
-```html {hl_lines=1}
-<c-button variant="subtle" class="text-rose-500 dark:text-rose-400 focus-visible:outline-current">
+```html {hl_lines=[2,3]}
+<c-button
+  variant="subtle"
+  class="text-green-500 focus-visible:outline-current dark:text-green-400"
+>
   Custom Subtle
 </c-button>
 ```
@@ -184,21 +187,21 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 > Icon-only buttons should have an `aria-label` so screen readers can announce them.
 
 ---
- 
+
 ## API Reference
 
 ### Props
 
-| Prop            | Type | Default | Options                                                                               | Description                                                                                     |
-| --------------- | ---- | ------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `href`          | str  | -       | -                                                                                     | When set, renders an `<a>` instead of a `<button>`.                                             |
-| `type`          | str  | button  | `button` `submit` `reset`                                                             | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
+| Prop            | Type | Default | Options                                                                                       | Description                                                                                     |
+| --------------- | ---- | ------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `href`          | str  | -       | -                                                                                             | When set, renders an `<a>` instead of a `<button>`.                                             |
+| `type`          | str  | button  | `button` `submit` `reset`                                                                     | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
 | `variant`       | str  | default | `default` `odyssey` `quest` `danger` `invert` `light` `dark` `subtle` `ghost` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
-| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                                                              | The size of the button.                                                                         |
-| `focus_outline` | bool | True    | `True` `False`                                                                        | Show a dashed outline when focused with the keyboard.                                           |
-| `pill`          | bool | False   | `True` `False`                                                                        | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                                                                                     | Extra classes. Utility classes override the component's styles.                                 |
-| `disabled`      | bool | False   | `True` `False`                                                                        | Disable the button. Ignored when `href` is set.                                                 |
+| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                                                                      | The size of the button.                                                                         |
+| `focus_outline` | bool | True    | `True` `False`                                                                                | Show a dashed outline when focused with the keyboard.                                           |
+| `pill`          | bool | False   | `True` `False`                                                                                | Use fully rounded ends instead of the default radius.                                           |
+| `class`         | str  | -       | -                                                                                             | Extra classes. Utility classes override the component's styles.                                 |
+| `disabled`      | bool | False   | `True` `False`                                                                                | Disable the button. Ignored when `href` is set.                                                 |
 
 ### Additional attributes
 
@@ -232,9 +235,13 @@ Alpine directives work on `<c-button>` like on any other element, with one catch
 </div>
 {{< /component-preview >}}
 
-```html {hl_lines=[2,3]}
+```html {hl_lines=[2,5]}
 <div x-data="{ disabled: true }" class="flex gap-x-4">
-  <c-button ::disabled="disabled">Submit</c-button>
-  <c-button @click="disabled = !disabled" variant="invert">Toggle disabled</c-button>
+  <c-button ::disabled="disabled">
+    Submit
+  </c-button>
+  <c-button @click="disabled = !disabled" variant="invert">
+    Toggle disabled
+  </c-button>
 </div>
 ```
