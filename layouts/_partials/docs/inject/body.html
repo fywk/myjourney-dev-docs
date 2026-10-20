@@ -1,13 +1,8 @@
 {{- if and .IsPage (eq .Type "docs") }}
   <script>
     (() => {
-      const KEY = "preview-theme-inverted";
       const mq = matchMedia("(prefers-color-scheme: dark)");
-
       let inverted = false;
-      try {
-        inverted = sessionStorage.getItem(KEY) === "1";
-      } catch {}
 
       const apply = () => {
         const theme = inverted ? (mq.matches ? "light" : "dark") : "system";
@@ -19,14 +14,9 @@
         });
       };
 
-      apply(); // body is already parsed at this point
-
       document.addEventListener("click", (e) => {
         if (!e.target.closest("[data-preview-toggle]")) return;
         inverted = !inverted;
-        try {
-          sessionStorage.setItem(KEY, inverted ? "1" : "0");
-        } catch {}
         apply();
       });
 
