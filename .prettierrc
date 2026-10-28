@@ -3,11 +3,11 @@
     {
       "files": ["*.html"],
       "options": {
-        "parser": "go-template",
-        "printWidth": 120
+        "parser": "go-template"
       }
     }
   ],
   "plugins": ["prettier-plugin-go-template", "prettier-plugin-tailwindcss"],
+  "printWidth": 120,
   "tailwindStylesheet": "./assets/css/tailwind.css"
 }

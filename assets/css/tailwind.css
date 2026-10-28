@@ -12,6 +12,34 @@
 @theme {
   --color-myjourney: #961a37;
 
+  /* Light/Dark adaptive greyscale */
+  --color-shade-0: light-dark(var(--color-white), var(--color-black));
+  --color-shade-50: light-dark(var(--color-gray-50), var(--color-gray-950));
+  --color-shade-100: light-dark(var(--color-gray-100), var(--color-gray-900));
+  --color-shade-200: light-dark(var(--color-gray-200), var(--color-gray-800));
+  --color-shade-300: light-dark(var(--color-gray-300), var(--color-gray-700));
+  --color-shade-400: light-dark(var(--color-gray-400), var(--color-gray-600));
+  --color-shade-500: var(--color-gray-500);
+  --color-shade-600: light-dark(var(--color-gray-600), var(--color-gray-400));
+  --color-shade-700: light-dark(var(--color-gray-700), var(--color-gray-300));
+  --color-shade-800: light-dark(var(--color-gray-800), var(--color-gray-200));
+  --color-shade-900: light-dark(var(--color-gray-900), var(--color-gray-100));
+  --color-shade-950: light-dark(var(--color-gray-950), var(--color-gray-50));
+  --color-shade-1000: light-dark(var(--color-black), var(--color-white));
+
+  /* Light/Dark adaptive accent */
+  --color-accent-50: light-dark(var(--color-indigo-50), var(--color-indigo-950));
+  --color-accent-100: light-dark(var(--color-indigo-100), var(--color-indigo-900));
+  --color-accent-200: light-dark(var(--color-indigo-200), var(--color-indigo-800));
+  --color-accent-300: light-dark(var(--color-indigo-300), var(--color-indigo-700));
+  --color-accent-400: light-dark(var(--color-indigo-400), var(--color-indigo-600));
+  --color-accent-500: var(--color-indigo-500);
+  --color-accent-600: light-dark(var(--color-indigo-600), var(--color-indigo-400));
+  --color-accent-700: light-dark(var(--color-indigo-700), var(--color-indigo-300));
+  --color-accent-800: light-dark(var(--color-indigo-800), var(--color-indigo-200));
+  --color-accent-900: light-dark(var(--color-indigo-900), var(--color-indigo-100));
+  --color-accent-950: light-dark(var(--color-indigo-950), var(--color-indigo-50));
+
   --color-odyssey-50: #f9f0ff;
   --color-odyssey-100: #f1d5ff;
   --color-odyssey-200: #e5b3ff;
@@ -24,8 +52,8 @@
   --color-odyssey-900: #360059;
 
   --font-sans:
-    "Roboto", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Roboto", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
 }
 
 @theme inline {
@@ -48,9 +76,7 @@
 
 @custom-variant dark {
   @media (prefers-color-scheme: dark) {
-    &:not(
-      :where([data-preview-theme="light"], [data-preview-theme="light"] *)
-    ) {
+    &:not(:where([data-preview-theme="light"], [data-preview-theme="light"] *)) {
       @slot;
     }
   }
