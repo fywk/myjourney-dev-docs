@@ -21,6 +21,7 @@ A customizable button component.
 
 {{< component-preview >}}
 <button class="c-button" data-variant="default" data-size="md" data-focus-outline="true" data-pill="false">Default</button>
+<button class="c-button" data-variant="accent" data-size="md" data-focus-outline="true" data-pill="false">Accent</button>
 <button class="c-button" data-variant="odyssey" data-size="md" data-focus-outline="true" data-pill="false">Odyssey</button>
 <button class="c-button" data-variant="quest" data-size="md" data-focus-outline="true" data-pill="false">Quest</button>
 <button class="c-button" data-variant="danger" data-size="md" data-focus-outline="true" data-pill="false">Danger</button>
@@ -28,6 +29,7 @@ A customizable button component.
 
 ```html
 <c-button>Default</c-button>
+<c-button variant="accent">Accent</c-button>
 <c-button variant="odyssey">Odyssey</c-button>
 <c-button variant="quest">Quest</c-button>
 <c-button variant="danger">Danger</c-button>
@@ -77,7 +79,7 @@ If you need a style the built-in variants don't cover, use `variant="custom"` an
 
 {{< component-preview >}}
 <button class="c-button bg-fuchsia-700 text-white hover:bg-fuchsia-800 focus-visible:outline-fuchsia-600" data-variant="custom" data-size="sm" data-focus-outline="true" data-pill="false">Fuchsia</button>
-<button class="c-button bg-linear-to-r from-[#4939d5] to-[#9c41d9] text-white outline-[#4939d5]" data-variant="custom" data-size="md" data-focus-outline="true" data-pill="false">Gradient</button>
+<button class="c-button bg-linear-to-r from-[#4939d5] to-[#9c41d9] text-white focus-visible:outline-[#4939d5]" data-variant="custom" data-size="md" data-focus-outline="true" data-pill="false">Gradient</button>
 {{< /component-preview >}}
 
 ```html {hl_lines=["2-4","9-10"]}
@@ -90,7 +92,7 @@ If you need a style the built-in variants don't cover, use `variant="custom"` an
 </c-button>
 <c-button
   variant="custom"
-  class="bg-linear-to-r from-[#4939d5] to-[#9c41d9] text-white outline-[#4939d5] ..."
+  class="bg-linear-to-r from-[#4939d5] to-[#9c41d9] text-white focus-visible:outline-[#4939d5] ..."
 >
   Gradient
 </c-button>
@@ -192,16 +194,16 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 
 ### Props
 
-| Prop            | Type | Default | Options                                                                                       | Description                                                                                     |
-| --------------- | ---- | ------- | --------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| `href`          | str  | -       | -                                                                                             | When set, renders an `<a>` instead of a `<button>`.                                             |
-| `type`          | str  | button  | `button` `submit` `reset`                                                                     | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
-| `variant`       | str  | default | `default` `odyssey` `quest` `danger` `invert` `light` `dark` `subtle` `ghost` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
-| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                                                                      | The size of the button.                                                                         |
-| `focus_outline` | bool | True    | `True` `False`                                                                                | Show a dashed outline when focused with the keyboard.                                           |
-| `pill`          | bool | False   | `True` `False`                                                                                | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                                                                                             | Extra classes. Utility classes override the component's styles.                                 |
-| `disabled`      | bool | False   | `True` `False`                                                                                | Disable the button. Ignored when `href` is set.                                                 |
+| Prop            | Type | Default | Options                                                                                                | Description                                                                                     |
+| --------------- | ---- | ------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
+| `href`          | str  | -       | -                                                                                                      | When set, renders an `<a>` instead of a `<button>`.                                             |
+| `type`          | str  | button  | `button` `submit` `reset`                                                                              | The `type` attribute of the `<button>`. Ignored when `href` is set.                             |
+| `variant`       | str  | default | `default` `accent` `odyssey` `quest` `danger` `invert` `light` `dark` `subtle` `ghost` `text` `custom` | The visual style variant of the button. 'text' variant renders a link-like button with no fill. |
+| `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                                                                               | The size of the button.                                                                         |
+| `focus_outline` | bool | True    | `True` `False`                                                                                         | Show a dashed outline when focused with the keyboard.                                           |
+| `pill`          | bool | False   | `True` `False`                                                                                         | Use fully rounded ends instead of the default radius.                                           |
+| `class`         | str  | -       | -                                                                                                      | Extra classes. Utility classes override the component's styles.                                 |
+| `disabled`      | bool | False   | `True` `False`                                                                                         | Disable the button. Ignored when `href` is set.                                                 |
 
 ### Additional attributes
 

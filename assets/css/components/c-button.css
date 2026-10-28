@@ -41,6 +41,9 @@
   &[data-variant="default"] {
     @apply bg-rose-700 text-white hover:bg-rose-800 focus-visible:outline-rose-600;
   }
+  &[data-variant="accent"] {
+    @apply bg-indigo-600 text-white hover:bg-indigo-700 focus-visible:outline-indigo-500;
+  }
   &[data-variant="odyssey"] {
     @apply bg-odyssey-500 text-white hover:bg-odyssey-600 focus-visible:outline-odyssey-400;
   }
