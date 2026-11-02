@@ -54,7 +54,7 @@
     @apply bg-red-500 text-white hover:bg-red-600 focus-visible:outline-red-400;
   }
   &[data-variant="invert"] {
-    @apply border border-gray-800 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-800 dark:border-gray-200 dark:bg-gray-50 dark:text-black dark:hover:bg-gray-200 dark:focus-visible:outline-gray-200;
+    @apply border border-shade-800 bg-shade-950 text-shade-0 hover:bg-shade-800 focus-visible:outline-shade-800;
   }
   &[data-variant="light"] {
     @apply border border-gray-200 bg-gray-50 text-black hover:bg-gray-200 focus-visible:outline-gray-200;
@@ -63,10 +63,10 @@
     @apply border border-gray-800 bg-gray-950 text-white hover:bg-gray-800 focus-visible:outline-gray-800;
   }
   &[data-variant="subtle"] {
-    @apply bg-gray-200 text-gray-700 hover:bg-gray-300 focus-visible:outline-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:focus-visible:outline-gray-400;
+    @apply bg-shade-200 text-shade-700 hover:bg-shade-300 focus-visible:outline-shade-600;
   }
   &[data-variant="ghost"] {
-    @apply text-gray-800 hover:bg-gray-100 focus-visible:outline-gray-800 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus-visible:outline-gray-200;
+    @apply text-shade-800 hover:bg-shade-100 focus-visible:outline-shade-800;
   }
   &[data-variant="text"] {
     @apply h-auto rounded-none px-0 hover:underline focus-visible:outline-current active:scale-none;
