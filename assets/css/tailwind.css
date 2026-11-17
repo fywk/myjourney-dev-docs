@@ -70,6 +70,20 @@
   --color-gray-950: var(--color-zinc-950);
 }
 
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  [data-preview-theme="light"] {
+    color-scheme: light;
+  }
+
+  [data-preview-theme="dark"] {
+    color-scheme: dark;
+  }
+}
+
 @layer components {
   @import "./components/c-button.css";
 }
@@ -80,6 +94,7 @@
       @slot;
     }
   }
+
   &:where([data-preview-theme="dark"], [data-preview-theme="dark"] *) {
     @slot;
   }
