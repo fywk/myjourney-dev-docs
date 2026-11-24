@@ -233,9 +233,9 @@ body[dir="rtl"] .book-menu {
     padding: 0;
   }
 
-  ul {
+  /* ul {
     margin-bottom: var(--space-8);
-  }
+  } */
 
   ul,
   li {
