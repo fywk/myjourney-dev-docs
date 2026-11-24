@@ -202,8 +202,14 @@ Add an icon through the `icon` named slot (`<c-slot name="icon">...</c-slot>`). 
 | `size`          | str  | md      | `xs` `sm` `md` `lg` `xl`                                                                               | The size of the button.                                                                         |
 | `focus_outline` | bool | True    | `True` `False`                                                                                         | Show a dashed outline when focused with the keyboard.                                           |
 | `pill`          | bool | False   | `True` `False`                                                                                         | Use fully rounded ends instead of the default radius.                                           |
-| `class`         | str  | -       | -                                                                                                      | Extra classes. Utility classes override the component's styles.                                 |
 | `disabled`      | bool | False   | `True` `False`                                                                                         | Disable the button. Ignored when `href` is set.                                                 |
+| `class`         | str  | -       | -                                                                                                      | Extra classes. Utility classes override the component's styles.                                 |
+
+### Slots
+
+| Slot   | Description                                    |
+| ------ | ---------------------------------------------- |
+| `icon` | Icon displayed in the left edge of the button. |
 
 ### Additional attributes
 
