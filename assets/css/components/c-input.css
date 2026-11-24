@@ -1,0 +1,21 @@
+.c-input {
+  /* Base style */
+  @apply block w-full rounded-[1.25ch] border border-shade-300 bg-shade-0 outline-accent-600 transition-colors placeholder:text-shade-500 disabled:cursor-not-allowed disabled:opacity-50;
+
+  /* Sizes */
+  &[data-size="xs"] {
+    @apply h-6 px-2 text-xs;
+  }
+  &[data-size="sm"] {
+    @apply h-8 px-2.5 text-sm;
+  }
+  &[data-size="md"] {
+    @apply h-10 px-3 text-sm;
+  }
+  &[data-size="lg"] {
+    @apply h-12 px-4 text-base;
+  }
+  &[data-size="xl"] {
+    @apply h-14 px-5 text-lg;
+  }
+}

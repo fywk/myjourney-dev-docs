@@ -86,6 +86,7 @@
 
 @layer components {
   @import "./components/c-button.css";
+  @import "./components/c-input.css";
 }
 
 @custom-variant dark {

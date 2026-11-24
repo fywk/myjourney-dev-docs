@@ -1,5 +1,7 @@
+{{ $flexDirection := .Get "flexDirection" | default "row" }}
+
 <div
-  class="preview not-prose relative overflow-x-auto border border-b-0 border-gray-300 transition-colors duration-300 dark:border-gray-700"
+  class="preview not-prose @container relative overflow-x-auto border border-b-0 border-gray-300 transition-colors duration-300 dark:border-gray-700"
   data-preview-theme="system"
 >
   <button
@@ -63,7 +65,7 @@
     </span>
   </button>
   <div
-    class="flex min-h-40 min-w-max items-center justify-center gap-4 p-8 transition-colors duration-300 in-data-[preview-theme=dark]:bg-gray-900 in-data-[preview-theme=light]:bg-gray-100"
+    class="flex min-h-40 min-w-max {{ if eq $flexDirection `column` }}flex-col @md:px-16 @lg:px-32{{ end }} items-center justify-center gap-4 p-8 transition-colors duration-300 in-data-[preview-theme=dark]:bg-gray-900 in-data-[preview-theme=light]:bg-gray-100"
   >
     {{ .Inner | safeHTML }}
   </div>
